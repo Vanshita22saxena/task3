@@ -15,7 +15,7 @@ test_images = test_images.astype('float32')/255
 train_labels = to_categorical(train_labels)
 test_labels = to_categorical(test_labels)
 model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
-model.fit(train_images, train_labels, batch_size=100, epochs=3, verbose=1)"
-test_loss, test_acc = model.evaluate(test_images, test_labels)"
+model.fit(train_images, train_labels, batch_size=100, epochs=3, verbose=1)
+test_loss, test_acc = model.evaluate(test_images, test_labels)
 print('Test Accuracy:', test_acc)
      
